@@ -1,0 +1,405 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Beer Watcher</title>
+    <meta name="description" content="Beer Watcher POS App">
+    <meta name="author" content="SitePoint">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Beer Watcher</h1>
+    <span>
+        <img class="menuBut" onclick="getLastPage(this)" src="left.png" height="60" width="60"/>
+        <img class="menuBut" onclick="getNextPage(this)" src="right.png" height="60" width="60"/>
+    </span>
+    <span>
+        <div class="tap">
+            <p>Select Beer Above and then Select Tap</p>
+            <select id="tId">
+                <option class="tClass" value=1>1</option>
+                <option class="tClass" value=2>2</option>
+                <option class="tClass" value=3>3</option>
+                <option class="tClass" value=4>4</option>
+                <option class="tClass" value=5>5</option>
+                <option class="tClass" value=6>6</option>
+                <option class="tClass" value=7>7</option>
+                <option class="tClass" value=8>8</option>
+            </select>
+            <button class="tapBut" id="formId"> Submit </button>
+        </div>
+    </span>
+    <span id="toggleBeer" onclick="openNav()"> OPEN</span>
+    <button id="cocktailsBut"> Cocktails </button>
+    <Span>
+        <p id="closeList"> On Deck </p>
+    </Span>
+    <button id="addBut"> Add Beer </button>
+
+
+    <div class="grid-container" id="gridcontain1">
+
+        <div id="beerNav">
+            <ul id="beerNav">BeerS</ul>
+        </div>
+
+        <div class="a1">
+            <ul class="beerContain">
+                <li class="company" id="compa1" value=1 onclick="getName(this.innerHTML)">Murphys Irish Stout</li>
+                <li class="tapname" value=1 id="tapname1"> TAP 1</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu1">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv1">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price1">PRICE</li>
+
+            </ul>
+
+            <label for="Beer_1">Keg Level</label>
+            <meter id="BeerMeter1" value="1.0"></meter>
+            <img class="beersvg" id="beera1" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="a2" id="ida2">
+            <ul class="beerContain">
+                <li class="company" id="compa2" value=2 onclick="getName(this.innerHTML)">Pabst Blue Ribbon</li>
+                <li class="tapname" id="tapname2" value=2>TAP 2 </li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu2">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv2">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price2">PRICE</li>
+            </ul>
+            <label for="Beer_2">Keg Level</label>
+            <meter id="BeerMeter2" value="1.0"></meter>
+            <img class="beersvg" id="beera1" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="b1">
+            <ul class="beerContain">
+                <li class="company" id="compb1" value=3 onclick="getName(this.innerHTML)">Allegash White</li>
+                <li class="tapname" id="tapname3 " value=3> TAP 3</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu3">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv3">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price3">PRICE</li>
+            </ul>
+            <label for="Beer_3">Keg Level</label>
+            <meter id="BeerMeter3" value="1.0"></meter>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="b2">
+            <ul class="beerContain">
+                <li class="company" id="compb2" value=4 onclick="getName(this.innerHTML)">Great Lakes Edmund
+                    Fitzgerald</li>
+                <li class="tapname" id="tapname4" value=4> TAP 4</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu4">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv4">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price4">PRICE</li>
+            </ul>
+            <label for="Beer_4">Keg Level</label>
+            <meter id="BeerMeter4" value="1.0"></meter>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="c1">
+            <ul class="beerContain">
+                <li class="company" id="compc1" value=5 onclick="getName(this.innerHTML)">Barvarianhaus Oktoberfest
+                </li>
+                <li class="tapname" id="tapname5" value=5>TAP 5</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu5">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv5">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price5">PRICE</li>
+            </ul>
+            <label for="Beer_5">Keg Level</label>
+            <meter id="BeerMeter5" value="1.0"></meter>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="c2">
+            <ul class="beerContain">
+                <li class="company" id="compc2" value=6 onclick="getName(this.innerHTML)">Buzz Beer Coffee Porter</li>
+                <li class="tapname" id="tapname6 " value=6>TAP 6</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu6">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv6">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price6">PRICE</li>
+            </ul>
+            <label for="Beer_6">Keg Level</label>
+            <meter id="BeerMeter6" value="1.0"></meter>
+
+            <img class="beersvg" id="beer90" src="beer80.svg" height="250" width="150">
+        </div>
+        <div id = 'totalsContain'>
+           
+        <div id="listTotal">
+        
+                
+            </uL>
+        </div>
+        <button id="cash">Cash Out</button> <button id="report">Sale Report</button>
+    </div>
+
+</div> 
+<li id='listDrink'>
+    <p id="salesTotal"> Tab Total </p>
+<li id="liClass"></li>
+
+    <div id="myModal" class="modal">
+
+        <span class="selection">Beer</span>
+        <div id="modal-content">
+
+            <span class="close">&times;</span>
+            <span class="selection">
+            </span>
+
+            <H3 id="displayPosBeer">Displayed Beer</H3>
+            <p id="displayPosBeer2">Displayed Beer</p>
+            <p id="modalList">
+                Items
+            </p>
+            <p id="drinkQuantity"> Drink Quantity<br></p>
+            <div class="posGrid">
+
+                <button class="posBut" id="one">1</button>
+                <button class="posBut" id="two">2</button>
+                <button class="posBut" id="three">3</button>
+                <button class="posBut" id="zero">0</button>
+                <button class="posBut" id="four">4</button>
+                <button class="posBut" id="five">5</button>
+                <button class="posBut" id="six">6</button>
+                <button class="posBut" id="seven">7</button>
+                <button class="posBut" id="eight">8</button>
+                <button class="posBut" id="nine">9</button>
+                <button class="posBut2" id="clear">C</button>
+                <button class="posBut2" id="Enter">Enter</button>
+                <button class="posBut2" id="plusOne">+1</button>
+                <button class="posBut2" id="negateOne">-1</button>
+                <button class="posBut2" id="Done">Done</button>
+            </div>
+
+            <p id="totalQuantity">Total Quantity</p>
+        </div>
+    </div>
+
+    <div id="saleModal" class="modal">
+        <span class="closeRep">&times;</span>
+        <div id="modal-content">   
+            <table id="myTable"></table>
+        </div>
+    </div>
+
+
+
+
+    <!-- Cocktails Modal-->
+    <div id="myModalCocktails" class="modalCt">
+
+        <span class="selectionCt">Cocktails</span>
+        <!-- POS Content -->
+        <div id="modal-contentCt">
+            <span class="closeCt">&times;</span>
+            <span class="selection">
+            </span>
+
+            <H3 id="displayPosCt">Cocktails</H3>
+            <p id="displayCt">Cocktails</p>
+            <p id="modalListCt">
+                Items
+            </p>
+            <div class="posGridCt">
+                <button class="posButCt" id="oneCt">Gin Tonic</button>
+                <button class="posButCt" id="twoCt">Moscow Mule</button>
+                <button class="posButCt" id="threeCt">White Russian</button>
+                <button class="posButCt" id="zeroCt">Manhattan</button>
+                <button class="posButCt" id="fourCt">Margarita</button>
+                <button class="posButCt" id="fiveCt">Old Fashioned</button>
+                <button class="posButCt" id="sixCt">House Martini</button>
+                <button class="posButCt" id="sevenCt">Bloody Mary</button>
+                <button class="posButCt" id="eightCt">Mojito</button>
+                <button class="posButCt" id="nineCt">Whiskey Sour</button>
+                <button class="posClr" id="clearCt">C</button>
+                <button class="posEnt" id="enterCt">Done</button>  
+            </div>
+
+            <p id="totalQuantity">Total Quantity</p>
+        </div>
+    </div>
+
+    <div id="addBeerForms">
+        <input name="name" type="text" class="beer-info" id="beer-info1" value="Name" />
+        <input name="name" type="text" class="beer-info" id="beer-info2" value="Style" />
+        <input name="email" type="text" class="beer-info" id="beer-info3" value="IBU" />
+        <input name="email" type="text" class="beer-info" id="beer-info4" value="ABV" />
+        <input name="name" type="text" class="beer-info" id="beer-info5" value="Price" />
+        <textarea name="text" class="beer-info" value="Comment"></textarea>
+        <button class="formBut" type="submit" id="formButId"> Submit </button>
+        <button class="formBut" id="formCancelId" type="submit" value="Cancel">Cancel</button>
+        <p id="demo">demo</p>
+    </div>
+    
+    <div class="grid-container" id="gridcontain2">
+        <div id="beerNav">
+            <ul id="beerNav">BeerS</ul>
+        </div>
+        <div class="a1">
+            <ul class="beerContain">
+                <li class="company" id="compa1" onclick="getName(this.innerHTML)">Strong Boi Bourbon Aged Ale</li>
+                <li class="tapname" id="tapname1"> TAP 7</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu7">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv7">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price7">PRICE</li>
+            </ul>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="a2" id="ida2">
+            <ul class="beerContain">
+                <li class="company" id="compa2" onclick="getName(this.innerHTML)">Big Belly Dark as Night Porter</li>
+                <li class="tapname" id="tapname2">TAP 8 </li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu8">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv8">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price8">PRICE</li>
+            </ul>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="b1">
+            <ul class="beerContain">
+                <li class="company" id="compb1" onclick="getName(this.innerHTML)">Wonka Beer Co Hopstopper</li>
+                <li class="tapname" id="tapname3"> TAP 9</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu9">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv9">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price9">PRICE</li>
+            </ul>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="b2">
+            <ul class="beerContain">
+                <li class="company" id="compb2" onclick="getName(this.innerHTML)">End of Days Blood Red Ale</li>
+                <li class="tapname" id="tapname4"> TAP 10</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu10">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv10">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price10">PRICE</li>
+            </ul>
+            <img class="beersvg" id="beer90" src="beer90.svg" height="250" width="150">
+        </div>
+
+        <div class="c1">
+            <ul class="beerContain">
+                <li class="company" id="compc1" onclick="getName(this.innerHTML)">Smueckls Lager</li>
+                <li class="tapname" id="tapname5">TAP 11</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu11">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv11">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price11">PRICE</li>
+            </ul>
+
+            <img class="beersvg" id="beer80" src="beer80.svg" height="250" width="150">
+        </div>
+
+        <div class="c2">
+            <ul class="beerContain">
+                <li class="company" id="compc2" onclick="getName(this.innerHTML)">Corgi Brew Co Little Long Dog IPA</li>
+                <li class="tapname" id="tapname6">TAP 12</li>
+                <span>IBU</span>
+                <li class="tapattrb" id="ibu12">IBU</li>
+                <span>ABV</span>
+                <li class="tapattrb" id="abv12">ABV</li>
+                <span>PRICE</span>
+                <li class="tapattrb" id="price12">PRICE</li>
+            </ul>
+            <img class="beersvg" id="beer80" src="beer80.svg" height="250" width="150">
+        </div>
+        
+   </div>
+
+
+    <!-- POS Modal -->
+    <div id="myModal" class="modal">
+        <span class="selection">Beer</span>
+
+        <!-- POS Content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <span class="selection">
+            </span>
+
+            <H3 id="displayPosBeer">Displayed Beer</H3>
+            <p id="displayPosBeer2">Displayed Beer</p>
+            <div class="posGrid">
+                <button class="posBut" id="one" value=1>1</button>
+                <button class="posBut" id="two">2</button>
+                <button class="posBut" id="three">3</button>
+                <button class="posBut" id="zero">0</button>
+                <button class="posBut" id="four">4</button>
+                <button class="posBut" id="five">5</button>
+                <button class="posBut" id="six">6</button>
+                <button class="posBut" id="seven">7</button>
+                <button class="posBut" id="eight">8</button>
+                <button class="posBut" id="nine">9</button>
+                <button class="posBut" id="Done">Done</button>
+                <button class="posBut2" id="clear">C</button>
+                <button class="posBut2" id="enter">Enter</button>
+                <button class="posBut2" id="plusone">+1</button>
+                <button class="posBut2" id="negateone">-1</button>
+                <button class="posBut2" id="Enter">Enter</button>
+            </div>
+
+            <p id="drinkQuantity">Drink Quantity</p>
+            <p id="totalQuantity">Total Quantity</p>
+            <p id="modalList">
+                Items
+            </p>
+        </div>
+        
+
+
+        <!--- On Hover Drink Info-->
+    <div id="drinkInfo" class="drinkInfoModal">
+            Info
+        </div>
+    </div>
+
+    <!--- On Hover Drink Info-->
+    <div id="drinkInfo" class="drinkInfoModal">
+        Info
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

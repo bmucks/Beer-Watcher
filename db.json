@@ -1,0 +1,23 @@
+
+  <select id="myselect" onchange="change_myselect(this.value)"></select>
+    <option value="">Choose an option:</option>
+    <option value="customers">Customers</option>
+    <option value="products">Products</option>
+    <option value="suppliers">Suppliers</option>
+  </select>
+</ui>
+
+
+
+    <div class="drinklist"></div>
+    <h1>Beer Watcher</h1>
+    <h2>Current Beer</h1>
+<div class= "grid-container">
+<ui class= "drinklist">
+
+  <li id='bs1'>Stout</li>
+  <li id='bs2'>Hefe</li>
+  <li id='bs3'>Pilsner</li>
+  <li id='bs4'>Amber</li>
+  <li id='bs5'>Saison</li>
+  <input  id="Search" type="text">
